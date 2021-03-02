@@ -1,0 +1,57 @@
+body {
+    text-align: center;
+}
+
+header, footer, aside, section {
+    border: 1px solid #999;
+    margin: 5px;
+    padding: 10px;
+}
+
+header{
+    height: 150px;
+    background-color: red;
+}
+
+section, aside {
+    float: left;
+    height: 200px;
+}
+
+section{
+    width: 60%; 
+}
+
+aside {
+    width: 30%;
+}
+
+header ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+}
+
+ul:after{
+    content:'';
+    display: block;
+    clear:both;
+}
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li a:hover:not(.active) {
+    background-color: #111;
+}
+.active {
+    background-color: #4CAF50;
+}
