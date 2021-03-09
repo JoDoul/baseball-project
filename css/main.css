@@ -1,19 +1,36 @@
  body {
     text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 8fr 1fr;
+    grid-template-rows: 200px minmax(700px, auto) 150px;
 } 
 
+.item:nth-child(1){
+    grid-column: 1 / 4;
+    grid-row: 1 / 2;
+}
+.item:nth-child(2){
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    border-style: solid;
+}
+.item:nth-child(3){
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+.item:nth-child(4){
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+    border-style: solid;
+}
+.item:nth-child(5){
+    grid-column: 1 / 4;
+    grid-row: 3 / 4;
+}
+
 header {
-    height: 215px;
+    height: 200px;
     background-color: gray;
-}
-
-main {
-    min-height: 700px;
-}
-
-footer {
-    height: 150px;
-    background-color: aqua;
 }
 
 header ul {
@@ -22,10 +39,20 @@ header ul {
     background-color: #FF00FF;
     justify-content: space-between;   
     padding: 0;
+    height: 30%;
 }
 
 header ul a {
     flex-basis: 100%;
+}
+
+#header_title {
+    padding: 50px;
+}
+
+header ul a {
+    color: black;
+    text-decoration: none;
 }
 
 .header_menu_list:hover {
@@ -40,5 +67,45 @@ header ul a {
 header h1, body {
     margin: 0px;
     padding: 0px;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+        "a b c"
+        "a d d";
+    gap: 10px;
+    padding: 10px;
+}
+
+#main_community{
+    grid-area: a;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+#main_game_rank{
+    grid-area: b;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+#main_bb_player_rank{
+    grid-area: c;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+#main_card{
+    grid-area: d;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+footer {
+    height: 150px;
+    background-color: aqua;
 }
 

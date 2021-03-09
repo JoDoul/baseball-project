@@ -5,28 +5,30 @@
         <link rel="stylesheet" href="../css/main.css">
     </head>
     <body>
-        <header>
-            <h1>슬퍼 너무...</h1>
+        <header class="item">
+            <h1 id="header_title">테스트용</h1>
             <nav>
                 <ul> 
-                    <a href=""><li class="header_menu_list">커뮤니티</li></a>
-                    <a href=""><li class="header_menu_list">커뮤니티</li></a>
-                    <a href=""><li class="header_menu_list">커뮤니티</li></a>
-                    <a href=""><li class="header_menu_list">커뮤니티</li></a>
+                    <a href=""><li class="header_menu_list">a</li></a>
+                    <a href=""><li class="header_menu_list">b</li></a>
+                    <a href=""><li class="header_menu_list">c</li></a>
+                    <a href=""><li class="header_menu_list">d</li></a>
                 </ul>
             </nav>
         </header>
-        <main>
-            <section>
-                <article id="main_community">a</article>
-                <article id="main_game_rank">b</article>
-                <article id="main_bb_player_rank">c</article>
-            </section>
-            <aside>
-                d
-            </aside>
+        <aside class="item">z</aside>
+        <main class="item">
+            <article id="main_community">a</article>
+            <article id="main_game_rank">b</article>
+            <article id="main_bb_player_rank">c</article>
+            <article id="main_card">
+                {% for item in title %}
+                {{item}}<br>
+                {% endfor %}
+            </article>
         </main>
-        <footer>
+        <aside class="item">d</aside>
+        <footer class="item">
         e
         </footer>
     </body>
